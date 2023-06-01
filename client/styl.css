@@ -1,0 +1,13 @@
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+body{
+    margin: 0;
+}
+.footer{
+    text-align: right;
+    padding: 3rem;
+}
