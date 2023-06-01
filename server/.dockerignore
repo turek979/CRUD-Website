@@ -1,0 +1,6 @@
+.idea
+venv
+db.sqlite3
+db.sh
+*/__pycache__/
+.gitignore
