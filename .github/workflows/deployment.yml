@@ -15,7 +15,7 @@ jobs:
           username: ${{ secrets.DROPLET_SSH_USER }}
           key: ${{ secrets.DROPLET_SSH_KEY }}
           script: |
-            cd /facere-album
+            cd /var/www/facere-album
             docker-compose down
             git pull
             docker-compose up -d --build
