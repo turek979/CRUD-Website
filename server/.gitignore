@@ -2,4 +2,7 @@
 venv
 db.sqlite3
 db.sh
-*/__pycache__/
+*/__pycache__/*
+*/*/__pycache__/*
+__pycache__/*
+.env.prod
