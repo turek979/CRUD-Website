@@ -17,5 +17,5 @@ jobs:
           script: |
             cd /var/www/facere-album
             docker-compose down
-            git pull https://franciszek-szeptycki:${{ GH_API_TOKEN }}@github.com/franciszek-szeptycki/facere-album.git
+            git pull https://franciszek-szeptycki:${{ secrets.GH_API_TOKEN }}@github.com/franciszek-szeptycki/facere-album.git
             docker-compose -f docker-compose.prod.yml up -d --build
