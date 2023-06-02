@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  nginx:
+    build:
+      context: ./nginx
+    ports:
+      - '80:80'
+    volumes:
+      - ./client:/client
+      - static:/static
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile.prod
+    env_file:
+      - ./server/.env.prod
+    environment:
+      - ENV_FILE=.env.prod
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    volumes:
+      - static:/static
+
+  db:
+    image: postgres
+    env_file:
+      - ./server/.env.prod
+    environment:
+      - POSTGRES_DB={DB_NAME}
+      - POSTGRES_USER={DB_USER}
+      - POSTGRES_PASSWORD={DB_PASSWORD
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+volumes:
+  postgres_data:
+  static:
