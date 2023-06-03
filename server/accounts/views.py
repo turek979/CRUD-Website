@@ -25,6 +25,6 @@ def user_login(request):
     user = authenticate(username=username, password=password)
     if user:
         token, _ = Token.objects.get_or_create(user=user)
-        return Response({"token": token.key})
+        return Response({"token": token.key}, status=200)
     else:
         return Response({"error": "Wrong Credentials"}, status=400)
