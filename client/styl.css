@@ -8,7 +8,6 @@ a{
     padding-left: 2rem;
 }
 a:hover{
-    scale: 1.5;
     transition: smooth;
     transition-duration: 1s;
     color: aliceblue;
@@ -53,6 +52,7 @@ h1{
     min-height: 20rem;
     text-align: left;
     padding: 2rem;
+    position: relative;
 }
 input{
     width: 79%;
@@ -92,11 +92,17 @@ li{
     background-color: rgba(208, 211, 211, 0.5);
 }
 meter{
-    width: 70%;
+    width: 60%;
+    height: 2rem;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0.7rem;
 }
 .footer{
     text-align: right;
     padding: 2.5rem;
     background: rgba(0,0,0, .5);
     width: 100%;
+    position: relative;
+    bottom: 0;
 }
