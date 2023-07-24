@@ -1,3 +1,3 @@
 # facere-album
 
-### hosting: `142.93.104.171`
+### hosting: `https://tiny-cassata-ab7298.netlify.app`
